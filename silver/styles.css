@@ -305,6 +305,11 @@ section { padding: 100px 0; }
   transition: border-color 0.3s;
 }
 .inquiry-email:hover { border-color: var(--silver-500); }
+.inquiry-note {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
 
 /* Footer */
 footer {
