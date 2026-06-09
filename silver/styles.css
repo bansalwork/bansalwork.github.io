@@ -235,22 +235,24 @@ section { padding: 100px 0; }
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .gallery-item:hover { transform: scale(1.02); }
-.gallery-item .placeholder {
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, var(--silver-700), var(--silver-500));
-  display: flex; align-items: flex-end; padding: 20px;
+.gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.gallery-item .placeholder.alt1 { background: linear-gradient(135deg, #1E1E2A, #7A7A90); }
-.gallery-item .placeholder.alt2 { background: linear-gradient(135deg, #2A2A36, #8A8A9E); }
-.gallery-item .placeholder.alt3 { background: linear-gradient(135deg, #1A1A26, #6A6A80); }
-.gallery-item .placeholder.alt4 { background: linear-gradient(135deg, #262632, #7A7A90); }
-.gallery-item .placeholder.alt5 { background: linear-gradient(135deg, #22222E, #8A8A9E); }
 .gallery-item .caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.7);
+  color: #fff;
   font-weight: 500;
+  background: linear-gradient(transparent 40%, rgba(0,0,0,0.7));
 }
 
 /* Narrative */
