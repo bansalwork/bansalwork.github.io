@@ -234,22 +234,21 @@ section { padding: 100px 0; }
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .gallery-item:hover { transform: scale(1.02); }
-.gallery-item .placeholder {
+.gallery-item img {
   width: 100%; height: 100%;
-  background: linear-gradient(135deg, var(--brown-100), var(--brown-300));
-  display: flex; align-items: flex-end; padding: 20px;
+  object-fit: cover;
+  display: block;
 }
-.gallery-item .placeholder.alt1 { background: linear-gradient(135deg, #E8DCCE, #B8946A); }
-.gallery-item .placeholder.alt2 { background: linear-gradient(135deg, #D4C4B0, #8B5E3C); }
-.gallery-item .placeholder.alt3 { background: linear-gradient(135deg, #C4B4A0, #6B4A2C); }
-.gallery-item .placeholder.alt4 { background: linear-gradient(135deg, #B8A890, #5A3A2C); }
-.gallery-item .placeholder.alt5 { background: linear-gradient(135deg, #D8C8B8, #A07850); }
 .gallery-item .caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.9);
   font-weight: 500;
+  background: linear-gradient(transparent, rgba(0,0,0,0.5));
 }
 
 /* Narrative */
